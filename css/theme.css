@@ -845,6 +845,13 @@ html.mobile .contents-page-container .parallax-container{
 	.prof-section .content-section, .prof-content {
 		padding-top: 150px !important;
 	}
+
+	#toast-container {
+		left: auto !important;
+		bottom: auto !important;
+		top: 10%;
+		right: 7%;
+	}
 }
 
 @media only screen and ( min-width : 993px) {
