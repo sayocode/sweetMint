@@ -799,6 +799,7 @@ a[rel="tag"]:before{
 	background: #f2f5f9;
 }
 
+
 html.mobile .contents-page-container .parallax-container{
 	max-height: 40vh;
 }
@@ -811,7 +812,7 @@ html.mobile .contents-page-container .parallax-container{
 		margin-left: 0 !important;
 	}
 	#toast-container{
-		bottom: 90vh !important;
+		bottom: 1rem !important;
 	}
 }
 
@@ -848,9 +849,8 @@ html.mobile .contents-page-container .parallax-container{
 
 	#toast-container {
 		left: auto !important;
-		bottom: auto !important;
-		top: 10%;
-		right: 7%;
+		bottom: 5rem !important;
+		right: 5%;
 	}
 }
 
