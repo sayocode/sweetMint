@@ -79,7 +79,7 @@
 		</div>
 	</div>
 	<div class="tag-wrap animated effect col m12">
-		<?php the_tags('<div class="chip marcellus-sc">', '</div><div class="chip">', '</div>'); ?>
+		<?php the_tags('<div class="chip marcellus-sc">', '</div><div class="chip marcellus-sc">', '</div>'); ?>
 	</div>
 	<?php
 		if( is_singular('post') ) {
