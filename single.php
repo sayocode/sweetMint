@@ -4,8 +4,8 @@
 
 <!-- main -->
 <main id="main" class="col s12 m8 l7">
-<?php if ( has_post_thumbnail() ) : ?>
 <article itemscope itemtype="http://schema.org/Article">
+<?php if ( has_post_thumbnail() ) : ?>
 <div id="postThumbnail" class="parallax-container">
 	<div class="parallax" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
 		<?php the_post_thumbnail(); ?>
