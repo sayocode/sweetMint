@@ -764,6 +764,10 @@ a[rel="tag"]:before{
 	background-color: #e8eaf6;
 }
 
+#main ul li{
+	margin-bottom: 0.8em;
+}
+
 .comment-author.vcard img{
 	max-width: 3rem;
 }
