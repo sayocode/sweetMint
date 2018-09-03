@@ -9,9 +9,7 @@ get_header(); ?>
 <section class="prof-section col s12">
 	<div class="content-section col s12 m8 about-this-site">
 		<h2 class="animated effect">About This Site</h2>
-		<p class="animated effect one-type">趣味で描いている絵をinstagramに上げたり、Webアプリを作ったり、クリエイティブなことが大好きな&ensp;sayoko&ensp;の活動記録。</p>
-		<p class="animated effect one-type">子供のころから絵を描くとワクワクした。つたないHTMLタグで未熟なホームページを作るのが楽しかった。</p>
-		<p class="animated effect one-type">大人になっても、何かを作ることが一番の喜びです。そんな三つ子の魂を持った20代半ばの女SEのホームページです。</p>
+		<?php echo get_the_about_this_site(); ?>
 
 		<div class="frontpage-ads col s12 m10 l7 offset-l1 animated effect">
 			<div class="col s12 center-align amatic-sc recommended"><p>- Recommended -</p></div>
@@ -45,28 +43,7 @@ get_header(); ?>
 		</div>
 	</div>
 	<div class="col s12 m4 prof-content white-text animated effect">
-		<div class="col s12" id="profCard">
-			<h3 class="animated effect">sayoko</h3>
-			<p class="animated effect"><img
-				src="<?php echo get_template_directory_uri(); ?>/images/personal/self-portrait-min.png"></p>
-			<p class="animated effect one-type">昔は紙とペンで。今はiPadとApple Pencilで。</p>
-			<p class="animated effect one-type">仕事はシステムエンジニア。趣味でWordPress。</p>
-			<a class="marcellus-sc" id="profLink"
-				href="<?php echo esc_url( home_url( '/' ) ); ?>/sayokos-profile/">
-				<span class="animated effect right-align">Read more</span>
-			</a>
-		</div>
-		<div class="col s12 animated effect" id="devCaseCard">
-		<h3 class="animated effect">Development Case</h3>
-			<p class="animated effect one-type">仕事ではWebアプリ。</p>
-			<p class="animated effect one-type">Java、HTML5、CSS、JavaScript、jQuery。</p>
-			<p class="animated effect one-type">趣味でいろいろと。</p>
-			<p class="animated effect one-type">iPhoneアプリ。WordPress。</p>
-			<a class="marcellus-sc" id="devCaseLink"
-				href="<?php echo esc_url( home_url( '/' ) ); ?>/development-case/">
-				<span class="animated effect right-align">Read more</span>
-			</a>
-		</div>
+		<?php echo get_the_about_this_site_description() ?>
 	</div>
 
 </section>

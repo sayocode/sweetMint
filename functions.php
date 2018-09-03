@@ -473,3 +473,49 @@ if(isset($data[0]) && ( is_front_page() && is_home() )) {
 
 return $ret;
 }
+
+add_action( 'customize_register', 'theme_customize' );
+function theme_customize($wp_customize){
+
+	// About This Site
+	$wp_customize->add_setting( 'about_this_site', array(
+		'default' => '',
+		) );
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'about_this_site', array(
+		'label' => 'About This Site',
+		'description' => 'About This Siteを入力してください。',
+		'section' => 'title_tagline',
+		'settings' => 'about_this_site',
+		'priority' => 20,
+		'type' => 'textarea',
+	)));
+
+	// About This Siteの説明
+	$wp_customize->add_setting( 'about_this_site_description', array(
+		'default' => '',
+		) );
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'about_this_site_description', array(
+		'label' => 'About This Siteの説明',
+		'description' => 'About This Siteの説明を入力してください。',
+		'section' => 'title_tagline',
+		'settings' => 'about_this_site_description',
+		'priority' => 20,
+		'type' => 'textarea',
+	)));
+}
+
+// About This Site
+function get_the_about_this_site(){
+	if(empty(get_theme_mod( 'about_this_site' ))){
+		return '';
+	}
+	return get_theme_mod( 'about_this_site' );
+}
+
+// About This Siteの説明
+function get_the_about_this_site_description(){
+	if(empty(get_theme_mod( 'about_this_site_description' ))){
+		return '';
+	}
+	return get_theme_mod( 'about_this_site_description' );
+}
