@@ -7,6 +7,7 @@ jQuery(document).ready(function($) {
 	// 画面の要素にアニメーション用のクラスを追加する
 	$("#main").find(".article-body").find("h2,h3,h4").addClass("animated effect one-type");
 	$("#main").find(".article-body").find("p,blockquote,table,hr,pre,li,div").addClass("animated effect");
+	$(".single-list").find("div").removeClass("animated effect");
 	$(".listings").find("h2,h3,h4,p").removeClass("animated effect").removeClass("one-type");
 
 	// 画面の要素の調整
