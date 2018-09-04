@@ -92,10 +92,29 @@
 						<?php if( has_nav_menu('navber') ) : ?>
 						<ul class="menu right hide-on-med-and-down">
 							<li class="top-nav">
-								<?php wp_nav_menu(); ?>
+							<?php 
+								$defaults = array(
+									'menu'		  => '',
+									'menu_class'	  => 'center-align dropable-nav col s12 right',
+									'menu_id'		=> 'frontNav',
+									'container'	=> '',
+									'container_class' => '',
+									'container_id'  => '',
+									'fallback_cb'	=> 'wp_page_menu',
+									'before'		  => '',
+									'after'		=> '',
+									'link_before'	=> '',
+									'link_after'	  => '',
+									'echo'		  => true,
+									'depth'		=> 2,
+									'walker'		  => '',
+									'theme_location'  => '',
+									'items_wrap'	  => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+								);
+								wp_nav_menu($defaults); ?>
+							<?php endif; ?>
 							</li>
 						</ul>
-						<?php endif; ?>
 					</div>
 				</nav>
 			</div>

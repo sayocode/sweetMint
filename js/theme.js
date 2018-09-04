@@ -124,6 +124,26 @@ jQuery(document).ready(function($) {
 		}
 	});
 
+	// ヘッダーナビゲーションの設定
+	const $navMenu = $(".dropable-nav .menu-item-has-children > a");
+	_.each($navMenu, function(elm, i){
+		const $elm = $(elm);
+		const $parent = $elm.parent();
+		const subUl = $parent.find("ul");
+		const listId = "subMenu" + i;
+
+		$elm.addClass("dropdown-trigger").attr("data-target",listId).data("target",listId);
+
+		subUl.attr("id", listId);
+		if(!$("body").hasClass("home")){
+			$elm.attr("style", "min-width:" + subUl.width() + "px;");
+		}
+	});
+
+	$("#mobile-nav .dropdown-content").removeClass("dropdown-content");
+
+	$navMenu.dropdown({ hover: true });
+
 });
 
 // 一文字ずつアニメーションする要素の文字をspanタグで囲む

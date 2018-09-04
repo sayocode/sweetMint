@@ -29,7 +29,7 @@
 </div>
 <!-- /container -->
 
-<?php
+<?php if( has_nav_menu('navber') ){
 	$defaults = array(
 	'menu'		  => '',
 	'menu_class'	  => 'menu sidenav',
@@ -48,7 +48,7 @@
 	'theme_location'  => '',
 	'items_wrap'	  => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 );
-	wp_nav_menu($defaults); ?>
+	wp_nav_menu($defaults);} ?>
 <script type="text/javascript">
 // サイト基本情報の変数 
 const homeUrl = "<?php echo esc_url( home_url( '/' ) ); ?>";

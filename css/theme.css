@@ -117,6 +117,14 @@ nav {
 	background: rgba(255, 255, 255, 0.9) !important;
 }
 
+.dropdown-content{
+	top: 64px !important;
+}
+
+#mobile-nav .sub-menu a:before{
+	content: "\00a0-\00a0";
+}
+
 .col {
 	padding: 0 !important;
 }

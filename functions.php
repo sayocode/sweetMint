@@ -169,6 +169,13 @@ register_sidebar( array(
 		'after_title' => '</h2>',
 ));
 
+function new_submenu_class($menu) {
+	$menu = preg_replace('/class="sub-menu"/','class="sub-menu dropdown-content"',$menu);
+	return $menu;      
+}
+
+add_filter('wp_nav_menu','new_submenu_class'); 
+
 //カスタム投稿タイプ
 global $wp_rewrite;
 $wp_rewrite->flush_rules();
