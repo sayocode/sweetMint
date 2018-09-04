@@ -650,7 +650,7 @@ ul.categories, ul.tags{
 }
 
 .blog-scroll {
-	max-height: 200px;
+	max-height: 420px;
 	overflow-y: scroll;
 }
 
@@ -825,6 +825,9 @@ html.mobile .contents-page-container .parallax-container{
 	}
 	#toast-container{
 		bottom: 1rem !important;
+	}
+	.blog-scroll {
+		max-height: 200px;
 	}
 }
 
