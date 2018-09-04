@@ -47,12 +47,14 @@
 					style="display: none;"></div>
 			</div>
 		</div>
-		<div itemprop='publisher' itemscope='itemscope' itemtype='https://schema.org/Organization'>
-			<div itemprop="name"><?php bloginfo( 'name' ); ?></div>
-			<div itemprop="image logo" itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
-			<meta itemprop="url" content="<?php echo get_template_directory_uri(); ?>/images/sayologo.png">
-			<meta itemprop="width" content="28">
-			<meta itemprop="height" content="41"></div>
+		<div class="blog-data">
+			<div itemprop='publisher' itemscope='itemscope' itemtype='https://schema.org/Organization'>
+				<div itemprop="name"><?php bloginfo( 'name' ); ?></div>
+				<div itemprop="image logo" itemscope='itemscope' itemtype='https://schema.org/ImageObject'>
+				<meta itemprop="url" content="<?php echo get_template_directory_uri(); ?>/images/sayologo.png">
+				<meta itemprop="width" content="28">
+				<meta itemprop="height" content="41"></div>
+			</div>
 		</div>
 </section>
 </article>
