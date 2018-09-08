@@ -17,19 +17,25 @@
 	<div class="article-body col s12">
 		<?php remove_filter ('the_content', 'wpautop'); ?>
 		<?php the_content(); ?>
-		<ul class="tags">
-			<?php
-$args = array(
-'orderby' => 'count',
-'order' => 'desc',
-'number' => 20
+		<?php 
+		$args = array(
+			'smallest'					=> 8,
+			'largest'					=> 22,
+			'unit'						=> 'pt', 
+			'number'					=> 0,  
+			'format'					=> 'flat',
+			'separator'					=> "\n",
+			'orderby'					=> 'name',
+			'order'						=> 'RAND',
+			'exclude'					=> null, 
+			'include'					=> null, 
+			'topic_count_text_callback'	=> default_topic_count_text,
+			'link'						=> 'view', 
+			'taxonomy'					=> 'post_tag', 
+			'echo'						=> true,
+			'child_of'					=> null, // 注を参照
 );
-$tags = get_terms('post_tag', $args);
-foreach($tags as $value) {
-echo '<li><a href="'. get_tag_link($value->term_id) .'">'. $value->name .' ('. $value->count .')</a></li>';
-}
-?>
-		</ul>
+		wp_tag_cloud($args); ?>
 	</div>
 
 	<?php wp_reset_postdata(); ?>
