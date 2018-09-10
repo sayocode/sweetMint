@@ -27,10 +27,6 @@
 	<meta property="og:description" content="" />
 	<meta property="fb:app_id" content="">
 
-	<!-- ファビコン -->
-	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" type="image/vnd.microsoft.ico">
-	<link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png">
-
 	<!-- スタイルシート -->
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 

@@ -69,6 +69,7 @@ get_header(); ?>
 		<div class="col s12 m8 blog-contents">
 		<?php if ( have_posts() ) : ?>
 			<?php
+			$loopcounter = 0;
 						while ( have_posts() ) {
 								$loopcounter++;
 
