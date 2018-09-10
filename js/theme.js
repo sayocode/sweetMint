@@ -38,7 +38,7 @@ jQuery(document).ready(function($) {
 	});
 
 	$archiveYearSelect.on("change", function(){
-		const jumpUrl = $($(this).prop("selectedOptions")).val();
+		const jumpUrl = $(this).val();
 		if(jumpUrl != ""){
 			window.location.href = jumpUrl;
 		}
@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
 	$categorySelect.on("change", function(){
 		console.log($($(this).prop("selectedOptions")).data("jump"));
 		if($($(this).prop("selectedOptions")).data("jump") != false){
-			const jumpUrl = homeUrl + "blog/category/" + $($(this).prop("selectedOptions")).val();
+			const jumpUrl = homeUrl + "blog/category/" + $(this).val();
 			window.location.href = jumpUrl;
 		}
 	});
