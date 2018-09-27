@@ -69,6 +69,10 @@
 							class="sns-github btn-floating waves-effect waves-light green accent-5" target="_blank">
 							<i class="fab fa-github"></i>
 						</a>
+						<a href="https://soundcloud.com/okoyas_sayoko"
+							class="sns-soundcloud btn-floating waves-effect waves-light green accent-5" target="_blank">
+							<i class="fab fa-soundcloud"></i>
+						</a>
 					</div>
 				</div>
 				<div class="brown darken-3" style="height:30px;">&ensp;</div>
