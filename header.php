@@ -61,6 +61,10 @@
 						</a>
 					</h1>
 					<div class="sns-link right-align">
+						<a href="https://www.zazzle.co.jp/sayocode?rf=238522058487844682&CMPN=share_dblst&lang=ja&social=true"
+							class="sns-instagram btn-floating waves-effect waves-light green accent-5" target="_blank">
+							<i class="fas fa-shopping-cart"></i>
+						</a>
 						<a href="https://www.instagram.com/okoyas_sayoko/"
 							class="sns-instagram btn-floating waves-effect waves-light green accent-5" target="_blank">
 							<i class="fab fa-instagram"></i>
