@@ -78,7 +78,7 @@
 				style="display: none;"></div>
 		</div>
 	</div>
-	<div class="tag-wrap animated effect col m12">
+	<div class="tag-wrap animated effect col s12">
 		<?php the_tags('<div class="chip marcellus-sc">', '</div><div class="chip marcellus-sc">', '</div>'); ?>
 	</div>
 	<?php
