@@ -419,6 +419,10 @@ time span{
 	margin: 0 !important;
 }
 
+.article-body{
+	width: 100%;
+}
+
 .article-body .input-field .select-wrapper{
 	padding: 3px;
 }
