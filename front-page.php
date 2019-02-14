@@ -50,11 +50,8 @@ get_header(); ?>
 
 <div class=" col s12 parallax-container">
 	<div class="col s12 z-depth-1 parallax">
-		<picture media="(min-width: 820px)"
-			srcset="<?php echo get_template_directory_uri(); ?>/images/morning-small.jpg') 1x, small@2x.jpg 2x">
 		<img
 			src="<?php echo get_template_directory_uri(); ?>/images/smoothy.jpg">
-		</picture>
 	</div>
 </div>
 
@@ -104,7 +101,7 @@ get_header(); ?>
 
 				?>
 			<div class="col s12 white-text blog-more-card">
-				<a class="marcellus-sc card grey darken-1 hoverable center-align"
+				<a class="marcellus-sc card grey darken-1 hoverable center-align animated effect"
 					href="<?php echo esc_url( home_url( '/' ) ); ?>/blog/">Read More
 				</a>
 			</div>
@@ -117,11 +114,9 @@ get_header(); ?>
 
 <div class=" col s12 parallax-container">
 	<div class="col s12 z-depth-1 parallax">
-	<picture media="(min-width: 820px)" srcset="<?php echo get_template_directory_uri(); ?>/images/morning-small.jpg') 1x, small@2x.jpg 2x">
 		<img
 			src="<?php echo get_template_directory_uri(); ?>/images/morning.jpg">
 	</div>
-	</picture>
 </div>
 
 <section class="mail-section col s12 white-text">
