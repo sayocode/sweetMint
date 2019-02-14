@@ -13,7 +13,7 @@
 					<span class="animated effect one-type" itemprop="name headline"><?php the_title(); ?></span>
 				</a>
 			</h1>
-			<div class="col s12 animated effect sns-share-links">
+			<div class="col s12 sns-share-links">
 				<a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
 					class="twitter-share-button" data-show-count="false">Tweet</a>
 				<div class="fb-share-button" data-href="<?php the_permalink(); ?>"
@@ -32,7 +32,7 @@
 		<div class="article-body col m12">
 			<?php remove_filter ('the_content', 'wpautop'); ?>
 			<?php the_content(); ?>
-			<div class="col s12 animated effect sns-share-links">
+			<div class="col s12 sns-share-links">
 				<a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
 					class="twitter-share-button" data-show-count="false">Tweet</a>
 				<div class="fb-share-button" data-href="<?php the_permalink(); ?>"

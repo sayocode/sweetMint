@@ -11,7 +11,7 @@
 		</div>
 		<div class="article-body col s12">
 		<div
-			class="category-list input-field animated marcellus-sc effect col s12">
+			class="category-list input-field marcellus-sc col s12">
 			<?php $args = array(
 				'show_option_all'   => '',
 				'show_option_none'   => '',
@@ -40,7 +40,7 @@
 		<div class="listings clearfix">
 			<?php if(have_posts()): while(have_posts()):the_post(); ?>
 
-			<article class="single-list col xl4 articles l6 s12 animated effect">
+			<article class="single-list col xl4 articles l6 s12">
 				<div class="col s12 white hoverable z-depth-1">
 					<a class="blog-link" href="<?php the_permalink(); ?>">&nbsp;</a>
 					<?php if ( has_post_thumbnail() ) : ?>
@@ -83,8 +83,8 @@
 		</div>
 	</div>
 </section>
-<section class="page-nation container animated effect">
-<div class="col s12 center-align animated effect">
+<section class="page-nation container">
+<div class="col s12 center-align">
 	<?php
 	global $wp_query;
 	$big = 999999999;
@@ -97,11 +97,11 @@
 	) );
 	?>
 </div>
-	<div class="col s6 center-align pn-prev animated effect">
+	<div class="col s6 center-align pn-prev">
 		<span class="deep-purple lighten-5 z-depth-1"> <?php previous_posts_link('next'); ?>
 		</span>
 	</div>
-	<div class="col s6 center-align pn-next animated effect">
+	<div class="col s6 center-align pn-next">
 		<span class="deep-purple lighten-5 z-depth-1"> <?php next_posts_link('prev') ?>
 		</span>
 	</div>

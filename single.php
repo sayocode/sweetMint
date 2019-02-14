@@ -25,7 +25,7 @@
 				<span class="animated effect one-type" itemprop="name headline"><?php the_title(); ?></span>
 			</a>
 		</h1>
-		<div class="single-info animated effect post-info col s12">
+		<div class="single-info post-info col s12">
 			<div class="col s12 date-wrap left">
 				<?php if ( get_post_type( $post ) == 'post') : ?>
 				<a
@@ -44,7 +44,7 @@
 				<?php the_category(', '); ?>
 			</div>
 		</div>
-		<div class="col s12 animated effect sns-share-links">
+		<div class="col s12 sns-share-links">
 			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
 				class="twitter-share-button" data-show-count="false">Tweet</a>
 			<div class="fb-share-button" data-href="<?php the_permalink(); ?>"
@@ -63,7 +63,7 @@
 	<div class="article-body col m12">
 		<?php remove_filter ('the_content', 'wpautop'); ?>
 		<?php the_content(); ?>
-		<div class="col s12 animated effect sns-share-links">
+		<div class="col s12 sns-share-links">
 			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
 				class="twitter-share-button" data-show-count="false">Tweet</a>
 			<div class="fb-share-button" data-href="<?php the_permalink(); ?>"

@@ -74,7 +74,7 @@ get_header(); ?>
 								$loopcounter++;
 
 								the_post();
-								echo '<article class="col xl4 m6 s12 toppage-article articles animated effect toppage-article-';
+								echo '<article class="col xl4 m6 s12 toppage-article articles toppage-article-';
 								echo $loopcounter;
 								echo '"><div class="col s12 white hoverable z-depth-1">';
 								echo '<a class="blog-link" href="';
@@ -103,7 +103,7 @@ get_header(); ?>
 						}
 
 				?>
-			<div class="col s12 animated effect white-text blog-more-card">
+			<div class="col s12 white-text blog-more-card">
 				<a class="marcellus-sc card grey darken-1 hoverable center-align"
 					href="<?php echo esc_url( home_url( '/' ) ); ?>/blog/">Read More
 				</a>
@@ -126,7 +126,7 @@ get_header(); ?>
 
 <section class="mail-section col s12 white-text">
 	<div class="content-section col s12">
-		<div class="contents-header animated effect">
+		<div class="contents-header">
 			<h2>Contact</h2>
 		</div>
 		<div class="contents-body">

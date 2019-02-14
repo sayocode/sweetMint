@@ -20,7 +20,7 @@
 		<?php remove_filter('the_content', 'wpautop'); ?>
 		<?php the_content(); ?>
 		<div
-			class="archive-list input-field animated marcellus-sc effect col s12 m6">
+			class="archive-list input-field marcellus-sc col s12 m6">
 			<select data-year="<?php echo get_query_var('year') ?>"
 				data-month="<?php $mnum = get_query_var('monthnum'); if($mnum < 10){ $mnum = '0' . $mnum; } echo $mnum; ?>">
 				<option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option>
@@ -28,7 +28,7 @@
 			</select><label>アーカイブ</label>
 		</div>
 		<div
-			class="category-list input-field animated marcellus-sc effect col s12 m6">
+			class="category-list input-field marcellus-sc col s12 m6">
 			<?php $args = array(
 				'show_option_all'	=> '',
 				'show_option_none'   => '',
@@ -67,7 +67,7 @@ $the_query = new WP_Query($args);
 if ( $the_query->have_posts() ) :
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 ?>
-			<article class="single-list col xl4 articles l6 s12 animated effect">
+			<article class="single-list col xl4 articles l6 s12">
 				<div class="col s12 white hoverable z-depth-1">
 					<a class="blog-link" href="<?php the_permalink(); ?>">&nbsp;</a>
 					<?php if ( has_post_thumbnail() ) : ?>
@@ -120,7 +120,7 @@ $paged = (int) get_query_var('paged');
 $args = array( 'posts_per_page' => 6);
 if ( $the_query->have_posts() ) : ?>
 <section class="page-nation container">
-	<div class="col s12 center-align animated effect">
+	<div class="col s12 center-align">
 		<?php
 if ($the_query->max_num_pages > 1) {
 	echo paginate_links(array(
@@ -134,11 +134,11 @@ if ($the_query->max_num_pages > 1) {
 ?>
 	</div>
 
-	<div class="col s6 center-align pn-prev animated effect">
+	<div class="col s6 center-align pn-prev">
 		<span class="deep-purple lighten-5 z-depth-1"> <?php echo get_previous_posts_link( __( 'prev' ), $the_query->max_num_pages ) ; ?>
 		</span>
 	</div>
-	<div class="col s6 center-align pn-next animated effect">
+	<div class="col s6 center-align pn-next">
 		<span class="deep-purple lighten-5 z-depth-1"> <?php echo get_next_posts_link( __( 'next' ), $the_query->max_num_pages ) ; ?></span>
 	</div>
 </section>

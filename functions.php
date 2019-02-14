@@ -137,35 +137,35 @@ add_action('after_setup_theme', 'register_my_menu');
 register_sidebar( array(
 		'name' => __( 'サイドバー' ),
 		'id' => 'side-widget',
-		'before_widget' => '<div class="widget_area animated effect">',
+		'before_widget' => '<div class="widget_area">',
 		'after_widget' => '<!-- // .side_widget_block --></div>',
-		'before_title' => '<h2 class="animated effect">',
+		'before_title' => '<h2>',
 		'after_title' => '</h2>',
 ));
 
 register_sidebar( array(
 		'name' => __( 'ページ下部左' ),
 		'id' => 'bottom-widget-left',
-		'before_widget' => '<div class="widget_area animated effect">',
+		'before_widget' => '<div class="widget_area">',
 		'after_widget' => '<!-- // .bottom_widget_left_block --></div>',
-		'before_title' => '<h2 class="animated effect">',
+		'before_title' => '<h2>',
 		'after_title' => '</h2>',
 ));
 
 register_sidebar( array(
 		'name' => __( 'ページ下部中央' ),
 		'id' => 'bottom-widget-center',
-		'before_widget' => '<div class="widget_area animated effect">',
+		'before_widget' => '<div class="widget_area">',
 		'after_widget' => '<!-- // .bottom_widget_center_block --></div>',
-		'before_title' => '<h2 class="animated effect">',
+		'before_title' => '<h2>',
 		'after_title' => '</h2>',
 ));
 register_sidebar( array(
 		'name' => __( 'ページ下部右' ),
 		'id' => 'bottom-widget-right',
-		'before_widget' => '<div class="widget_area animated effect">',
+		'before_widget' => '<div class="widget_area">',
 		'after_widget' => '<!-- // .bottom_widget_right_block --></div>',
-		'before_title' => '<h2 class="animated effect">',
+		'before_title' => '<h2>',
 		'after_title' => '</h2>',
 ));
 
@@ -281,7 +281,7 @@ $singleInfo = '<div class="single-info post-info animated effect right-align col
 if(get_post_type() == 'post'){
  $catLink = '<a href="'.get_category_link( $cats[0]->term_id ).'" rel="category tag">'.$catname.'</a>';
 }
-		$list .= '<article class="single-list col xl4 articles l6 s12 animated effect"><div class="col s12 white hoverable z-depth-1">'
+		$list .= '<article class="single-list col xl4 articles l6 s12"><div class="col s12 white hoverable z-depth-1">'
 		. '<a class="blog-link" href="' . get_permalink() . '">&nbsp;</a>'
 		. $thumbnail
 		. '<div class="article-contents"><div class="date-wrap left">'
@@ -312,7 +312,7 @@ function breadcrumb(){
 	global $post;
 	$str ='';
 	if(!is_home()&&!is_admin()){
-		$str.= '<div class="col s12 animated effect marcellus-sc" id="breadcrumb-wrap"><div id="breadcrumb"><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
+		$str.= '<div class="col s12 marcellus-sc" id="breadcrumb-wrap"><div id="breadcrumb"><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">';
 		$str.= '<a href="'. home_url() .'" itemprop="url"><span itemprop="title"><i class="fas fa-home"></i> top</span></a>&ensp;&gt;&#160;&ensp;</span>';
 		if(is_category()) {
 			$cat = get_queried_object();
