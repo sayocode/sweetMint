@@ -1,8 +1,10 @@
 jQuery(document).ready(function($) {
 	const $body = $("body");
+	const $window = $(window);
 
 	const $siteNav = $("#site-nav");
 	const $sidebarArea = $(".sidebar-area");
+	let scroll = $window.scrollTop();
 
 	// 画面の要素にアニメーション用のクラスを追加する
 	$("#main").find(".article-body").find("h2,h3,h4").addClass("animated effect one-type");
@@ -11,7 +13,7 @@ jQuery(document).ready(function($) {
 
 	// 画面の要素の調整
 	wrapSpan($(".one-type"), $);
-	effect($);
+	effect($, scroll);
 	sideResize($);
 
 	// モバイル用ナビゲーションの初期化
@@ -60,11 +62,11 @@ jQuery(document).ready(function($) {
 	});
 
 	// scrollまたは画面リサイズでナブバーフィックス、サイドバー高さ調整と、アニメーション開始
-	$(window).on('resize scroll', function() {
+	$window.on('resize scroll', function() {
 
-		const scroll = $(window).scrollTop();
+		scroll = $window.scrollTop();
 		const imgPos = $siteNav.offset().top;
-		const windowHeight = $(window).height();
+		const windowHeight = $window.height();
 		const fixedFlg = scroll > imgPos;
 		if (fixedFlg) {
 			$siteNav.addClass("navbar-fixed");
@@ -72,7 +74,10 @@ jQuery(document).ready(function($) {
 			$siteNav.removeClass("navbar-fixed");
 		}
 
-		effect($);
+		effect($, scroll);
+	});
+
+	$window.on('resize', function() {
 		sideResize($);
 	});
 
@@ -161,15 +166,13 @@ function wrapSpan($target, $){
 }
 
 // 要素をアニメーションさせる
-function effect($){
-
-	const scroll = $(window).scrollTop();
+function effect($, scroll){
 
 	// 下にスクロールしていくことでコンテンツをぬるっと表示
 	$(".effect").each(function(i, elm) {
 		const $elm = $(elm);
 		const imgPos = $elm.offset().top;
-		const windowHeight = $(window).height();
+		const windowHeight = $window.height();
 
 		const viewFlg = scroll > imgPos - windowHeight + (windowHeight / 6);
 
@@ -212,7 +215,7 @@ function getScrollBottom() {
 // サイドバーの高さ調整
 function sideResize($){
 
-	var w = window.innerWidth ? window.innerWidth: $(window).width();
+	var w = window.innerWidth ? window.innerWidth: $window.width();
 	if (w > 600) {
 		let sideMinHeight = 0;
 		sideMinHeight = $("#main").height();
