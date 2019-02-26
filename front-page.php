@@ -112,13 +112,6 @@ get_header(); ?>
 	</div>
 </section>
 
-<div class=" col s12 parallax-container">
-	<div class="col s12 z-depth-1 parallax">
-		<img
-			src="<?php echo get_template_directory_uri(); ?>/images/morning.jpg">
-	</div>
-</div>
-
 <section class="mail-section col s12 white-text">
 	<div class="content-section col s12">
 		<div class="contents-header">

@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
 
 	// 画面の要素の調整
 	wrapSpan($(".one-type"), $);
-	effect($, scroll);
+	effect($, scroll, $window);
 	sideResize($);
 
 	// モバイル用ナビゲーションの初期化
@@ -74,7 +74,7 @@ jQuery(document).ready(function($) {
 			$siteNav.removeClass("navbar-fixed");
 		}
 
-		effect($, scroll);
+		effect($, scroll, $window);
 	});
 
 	$window.on('resize', function() {
@@ -166,7 +166,7 @@ function wrapSpan($target, $){
 }
 
 // 要素をアニメーションさせる
-function effect($, scroll){
+function effect($, scroll, $window){
 
 	// 下にスクロールしていくことでコンテンツをぬるっと表示
 	$(".effect").each(function(i, elm) {
