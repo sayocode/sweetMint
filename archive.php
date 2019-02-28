@@ -20,7 +20,7 @@
 		<div class="article-body col s12">
 <?php if(is_date()) : ?>
 		<div
-			class="archive-list input-field marcellus-sc col s12">
+			class="list-wrap archive-list input-field marcellus-sc col s12">
 			<select data-year="<?php echo get_query_var('year') ?>"
 				data-month="<?php $mnum = get_query_var('monthnum'); if($mnum < 10){ $mnum = '0' . $mnum; } echo $mnum; ?>"
 				>
