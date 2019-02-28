@@ -159,7 +159,7 @@ function wrapSpan($target, $){
 		const text = $elm.text();
 		let t = "";
 		text.split('').forEach(function (c) {
-			t += '<span style="opacity:0;">'+c+'</span>';
+			t += '<span style="opacity:0;">'+c.replace(/\s/g, "&ensp;")+'</span>';
 		});
 		$elm.html(t);
 	});
