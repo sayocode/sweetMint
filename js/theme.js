@@ -1,6 +1,7 @@
 jQuery(document).ready(function($) {
 	const $body = $("body");
 	const $window = $(window);
+	const isHome = $body.hasClass("home");
 
 	const $siteNav = $("#site-nav");
 	const $sidebarArea = $(".sidebar-area");
@@ -76,10 +77,11 @@ jQuery(document).ready(function($) {
 
 		effect($, scroll, $window);
 	});
-
-	$window.on('resize', function() {
-		sideResize($);
-	});
+	if(!isHome){
+		$window.on('resize scroll', function() {
+			sideResize($);
+		});
+	}
 
 	// ボタンにクラス追加
 	$("#wpcf7-f18-o1 .wpcf7-form-control.wpcf7-submit").addClass("waves-effect waves-light btn light-green lighten-2 center-align");
@@ -109,7 +111,7 @@ jQuery(document).ready(function($) {
 		}
 	});
 
-	if($body.hasClass("home")){
+	if(isHome){
 		_.each($("#sidebar").find(".widget_area"), function(elm, i){
 			const $elm = $(elm);
 			$elm.addClass("col s12 m4");
