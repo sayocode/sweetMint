@@ -15,7 +15,6 @@
 		</div>
 
 	<div class="article-body col s12">
-		<?php remove_filter ('the_content', 'wpautop'); ?>
 		<?php the_content(); ?>
 		<?php 
 		$args = array(

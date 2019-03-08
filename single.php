@@ -61,7 +61,6 @@
 	</div>
 
 	<div class="article-body col m12">
-		<?php remove_filter ('the_content', 'wpautop'); ?>
 		<?php the_content(); ?>
 		<div class="col s12 sns-share-links">
 			<a href="https://twitter.com/share?ref_src=twsrc%5Etfw"

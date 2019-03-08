@@ -17,7 +17,6 @@
 	</div>
 
 	<div class="article-body col s12">
-		<?php remove_filter('the_content', 'wpautop'); ?>
 		<?php the_content(); ?>
 		<div
 			class="list-wrap archive-list input-field marcellus-sc col s12 m6">
