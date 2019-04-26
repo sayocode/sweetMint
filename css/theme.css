@@ -423,6 +423,10 @@ time span{
 	width: 100%;
 }
 
+.list-wrap{
+	z-index: 2 !important;
+}
+
 .article-body .input-field .select-wrapper{
 	padding: 3px;
 }
@@ -815,9 +819,17 @@ a[rel="tag"]:before{
 	background: #f2f5f9;
 }
 
+.rss-widget-icon{
+	display: none;
+}
 
 html.mobile .contents-page-container .parallax-container{
 	max-height: 40vh;
+}
+
+pre {
+	width: 100%;
+	overflow-y: scroll;
 }
 
 @media only screen and (max-width: 600px) {
