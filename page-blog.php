@@ -17,10 +17,9 @@
 	</div>
 
 	<div class="article-body col s12">
-		<?php remove_filter('the_content', 'wpautop'); ?>
 		<?php the_content(); ?>
 		<div
-			class="archive-list input-field marcellus-sc col s12 m6">
+			class="list-wrap archive-list input-field marcellus-sc col s12 m6">
 			<select data-year="<?php echo get_query_var('year') ?>"
 				data-month="<?php $mnum = get_query_var('monthnum'); if($mnum < 10){ $mnum = '0' . $mnum; } echo $mnum; ?>">
 				<option value=""><?php echo esc_attr( __( 'Select Month' ) ); ?></option>
@@ -28,7 +27,7 @@
 			</select><label>アーカイブ</label>
 		</div>
 		<div
-			class="category-list input-field marcellus-sc col s12 m6">
+			class="list-wrap category-list input-field marcellus-sc col s12 m6">
 			<?php $args = array(
 				'show_option_all'	=> '',
 				'show_option_none'   => '',
