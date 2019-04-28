@@ -18,14 +18,7 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
-	<!-- OGP情報（プラグイン出力する場合は削除） -->
-	<meta property="og:title" content="">
-	<meta property="og:type" content="">
-	<meta property="og:url" content="">
-	<meta property="og:image" content="">
-	<meta property="og:site_name" content="">
-	<meta property="og:description" content="" />
-	<meta property="fb:app_id" content="">
+
 
 	<!-- スタイルシート -->
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
@@ -59,7 +52,7 @@
 						</a>
 					</h1>
 					<div class="sns-link right-align">
-						<a href="https://www.zazzle.co.jp/sayocode?rf=238522058487844682&CMPN=share_dblst&lang=ja&social=true"
+						<a href="https://darts-shop.sayoko-ct.com/"
 							class="sns-instagram btn-floating waves-effect waves-light green accent-5" target="_blank">
 							<i class="fas fa-shopping-cart"></i>
 						</a>
